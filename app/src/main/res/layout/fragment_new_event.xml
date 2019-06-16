@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+
+
+<EditText
+    android:id="@+id/label_val"
+    android:layout_width="match_parent"  android:layout_height="wrap_content"
+    android:inputType="text"
+    android:hint="name"
+    android:layout_marginTop="10px"
+    android:imeOptions="actionDone" />
+
+<EditText
+    android:id="@+id/value_val"
+    android:layout_width="match_parent"  android:layout_height="wrap_content"
+    android:digits="0123456789."
+    android:inputType="numberDecimal"
+    android:hint="value"
+    android:imeOptions="actionDone" />
+
+<Button
+    android:id="@+id/createEventBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="add new event" />
+</LinearLayout>
+

@@ -1,0 +1,90 @@
+{
+  "namespace": "com.moneyevents2020.app.domain",
+  "type": "record",
+  "name": "Dashboard",
+  "fields": [
+    {
+      "name": "DashBoardReport",
+      "type": {
+        "type": "record",
+        "name": "DashBoardReport",
+        "fields": [
+         {
+            "name": "boardId",
+            "type": ["null", "string"]
+          },
+          {
+              "name": "name",
+              "type": "string"
+           },
+           {
+            "name": "owner",
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "type": "string"
+          },
+          {
+            "name": "budget",
+            "type": "float"
+          },
+          {
+            "name": "spent",
+            "type": ["null", "float"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "MoneyEventList",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "MoneyEvent",
+          "type": "record",
+          "fields": [
+            {
+              "name": "boardId",
+              "type": "string",
+              "logicalType": "uuid"
+            },
+            {
+              "name": "month",
+              "type": "string"
+            },
+            {
+              "name": "categoryId",
+              "type": "int"
+            },
+            {
+              "name": "eventId",
+              "type": "int"
+            },
+            {
+              "name": "userId",
+              "type": "string",
+              "logicalType": "uuid"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "float"
+            },
+            {
+              "name": "currency",
+              "type": "string"
+            },
+            {
+              "name": "date",
+              "type": "long"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
